@@ -53,12 +53,13 @@ The config for using the models is `.../PhenoPad-SpeechEngine/kaldi-gstreamer-se
 Running the server
 ------------------
 Go to the root path of SpeechEngine and create the following folders:
-`data/`
-    `data/audiofiles/`
-        `data/audiofiles/single_channel/`
-        `data/audiofiles/multi_channel/`
-    `data/saved_kaldi_asr_results/`
-
-Go to the root path of SpeechEngine and run `bash start.sh -y /path/to/your/yaml`. This starts the master server that handles client requests that listens on port 8888 and the worker that performs the recognition task. You can modify the port number in `start.sh`. When you are done, run `stop.sh` to terminate the servers.
+```
+data
+|-- audiofiles
+     |-- single_channel
+     |-- multi_channel
+|-- saved_kaldi_asr_results
+```
+In the root path of SpeechEngine and run `bash start.sh -y /path/to/your/yaml`. This starts the master server that handles client requests that listens on port 8888 and the worker that performs the recognition task. You can modify the port number in `start.sh`. When you are done, run `stop.sh` to terminate the servers.
 
 If you run into problems when running the servers, check `master.log` and `worker.log` for logging output.
