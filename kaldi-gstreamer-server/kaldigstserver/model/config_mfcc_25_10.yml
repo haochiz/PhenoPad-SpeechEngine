@@ -1,0 +1,21 @@
+feature_extraction:
+   name: YaafeMFCC                  # extract MFCCs using Yaafe
+   params:
+      e: False                      # no energy
+      De: True                      # energy 1st derivative
+      DDe: True                     # energy 2nd derivative
+      coefs: 19                     # 19 coefficients
+      D: True                       # with 1st derivatives
+      DD: True                      # and 2nd derivatives
+      #duration: 0.025               # one 25ms-long windows
+      #step: 0.010                   # and a step of 10ms
+      block_size: 400
+      step_size: 160
+
+      sample_rate: 16000
+
+normalization:
+   name: ShortTermStandardization   # apply short term standardization
+   params:
+      duration: 2                   # using a 3s-long sliding window
+
