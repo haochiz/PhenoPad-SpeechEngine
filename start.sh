@@ -33,7 +33,7 @@ fi;
 # start a local master
 if [ "$MASTER" == "localhost" ] ; then
   
-  python ./kaldi-gstreamer-server/kaldigstserver/master_server.py --port=$PORT 2>> ./master.log &
+  python ./kaldi-gstreamer-server/kaldigstserver/master_server_google.py --port=$PORT 2>> ./master.log &
   echo "master_server started"
 fi
 
